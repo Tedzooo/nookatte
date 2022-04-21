@@ -11,7 +11,7 @@
   ],
   "success_url": "https://t.me/+qpzrlYi1MWIyNTI9",
   "website": "https://github.com/Tedzo555/TEDZO-FORWRD-BOT",
-  "repository": "https://github.com/Tedzo555/TEDZO-FORWRD-BOT",
+  "repository": "https://github.com/TEDZO123/TEDZO_PYROGRAM_BOT",
   "env": {
     "API_ID": {
       "description": "Get this value from https://my.telegram.org or @UseTGXBot",
