@@ -1,0 +1,37 @@
+{
+  "name": "TEDZO-FORWRD-BOT",
+  "description": "Telegram's Best Smart Plugin File Forward Bot",
+  "logo": "https://telegra.ph/file/8b8419bb855959c143875.jpg",
+  "keywords": [
+    "telegram",
+    "best",
+    "file",
+    "forward",
+    "bot"
+  ],
+  "success_url": "https://t.me/+qpzrlYi1MWIyNTI9",
+  "website": "https://github.com/Tedzo555/TEDZO-FORWRD-BOT",
+  "repository": "https://github.com/Tedzo555/TEDZO-FORWRD-BOT",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org or @UseTGXBot",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org or @UseTGXBot",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token from @BotFather",
+      "value": ""
+    },
+    
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
