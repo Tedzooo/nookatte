@@ -1,5 +1,5 @@
 {
-    "name": "Auto Filter Bot sjs3",
+    "name": "Asluserbotv34",
     "description": "Adg greater auto filter bot with features like IMDb support,inline mode,broadcast feature etc..",
     "logo":"https://telegra.ph/file/ad9cb7fc42ec0e5e6d006.jpg",
     "keywords": [
@@ -30,15 +30,12 @@
             "description": "Get this value from https://my.telegram.org",
             "value": ""
         }
-        
-        
-    },
+         
+        },
     "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
+    "buildpacks": [{
+        "url": "heroku/python"
+    }],
     "formation": {
         "worker": {
             "quantity": 1,
