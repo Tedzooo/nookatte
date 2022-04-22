@@ -6,7 +6,7 @@ from pyrogram.errors import UserNotParticipant
 import random
 import asyncio
 import pytz, datetime
-FORCE_SUB = "AIOM_PYRO"
+FORCE_SUB = "tzobotz"
 
 
 @Client.on_message(filters.command("start")) 
@@ -22,7 +22,7 @@ async def start_message(bot, message):
         except UserNotParticipant:
              await message.reply_text(
                  text="Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Tʜɪs Bᴏᴛ",
-                 reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_PYRO") ]])
+                 reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url="https://t.me/tzobotz") ]])
              )
              return
     m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
@@ -40,7 +40,7 @@ async def start_message(bot, message):
         photo=random.choice(PHOTOS),
         caption=f"""<b>{get} 👋, {message.from_user.mention}
 
-Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/ajvadntr2)
+Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/tedzo01)
 
 Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
         reply_markup=InlineKeyboardMarkup(button)
