@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogrambot.photos import PHOTOS
 from pyrogrambot.buttons import button
-from pyrogram.types import ReplyKeybordMarkup 
+from pyrogram.types import ReplyKeyboardMarkup 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant 
 import random
