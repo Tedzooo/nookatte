@@ -12,11 +12,7 @@ FORCE_SUB = "tzobotz"
 
 @Client.on_message(filters.command("start")) 
 async def start_message(bot, message):
-    await asyncio.sleep(0.6)
-    if FORCE_SUB:
-        try:
-            user = await bot.get_chat_member(FORCE_SUB, message.chat.id)
-            if user.status == "kicked out":
+    await asyncio.sleep(0.2)
                 await message.reply_text("<b>Aᴄᴄᴇꜱꜱ ᴅᴇɴɪᴇᴅ 🚸</b>")
                 return
         except UserNotParticipant:
