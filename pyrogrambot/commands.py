@@ -7,9 +7,8 @@ from pyrogram.errors import UserNotParticipant
 import random
 import asyncio
 import pytz, datetime
-
-m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
-    time = m.hour
+M = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+    time = M.hour
 
     if time < 12:
         get="Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
