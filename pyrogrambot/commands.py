@@ -24,7 +24,7 @@ async def start_message(bot, message):
                  text="Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Tʜɪs Bᴏᴛ",
                  reply_markup=ReplyKeyboardMarkup(
                      [[ 
-                         "START","HELP","👀",
+                         "START","HELP","👀"
                      ]]
                 )
             )
