@@ -7,8 +7,24 @@ from pyrogram.errors import UserNotParticipant
 import random
 import asyncio
 import pytz, datetime
-M = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
-    time = M.hour
+FORCE_SUB = "tzobotz"
+
+
+@Client.on_message(filters.command("start")) 
+async def start_message(bot, message):
+    await asyncio.sleep(0.6)
+             await message.reply_text(
+                 text="Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Tʜɪs Bᴏᴛ",
+                 reply_markup=ReplyKeyboardMarkup(
+                     [[ 
+                         "START","HELP","👀",
+                     ]]
+                )
+            )
+
+             return
+    m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+    time = m.hour
 
     if time < 12:
         get="Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
@@ -18,24 +34,13 @@ M = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
         get="Gᴏᴏᴅ Eᴠᴇɴɪɴɢ"
     else:
         get="Gᴏᴏᴅ Nɪɢʜᴛ"
-
-@Client.on_message(filters.command("start")) 
-async def start_message(bot, message):
-    await asyncio.sleep(0.2)
     await message.reply_photo(
         photo=random.choice(PHOTOS),
         caption=f"""<b>{get} 👋, {message.from_user.mention}
-
 Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/tedzo01)
-
 Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
-        reply_markup=ReplyKeyboardMarkup(
-                     [[ 
-                         "START","HELP","👀"
-                     ]]
-                )
-            )
-
+        reply_markup=InlineKeyboardMarkup(button)
+    )
 @Client.on_message(filters.group & filters.command("id")) 
 async def id_message(bot, msg):
     text = f"""Tɪᴛʟᴇ : {msg.chat.title}
