@@ -1,8 +1,9 @@
 from pyrogram import Client, filters
 from pyrogrambot.photos import PHOTOS
 from pyrogrambot.buttons import button
+from pyrogram.types import ReplyKeybordMarkup 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.errors import UserNotParticipant
+from pyrogram.errors import UserNotParticipant 
 import random
 import asyncio
 import pytz, datetime
@@ -21,8 +22,13 @@ async def start_message(bot, message):
         except UserNotParticipant:
              await message.reply_text(
                  text="Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Tʜɪs Bᴏᴛ",
-                 reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url="https://t.me/tzobotz") ]])
-             )
+                 reply_markup=ReplyKeyboardMarkup(
+                     [[ 
+                         "START","HELP","👀",
+                     ]]
+                )
+            )
+
              return
     m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
     time = m.hour
