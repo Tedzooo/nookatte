@@ -1,6 +1,7 @@
-from pyrogram import Client
-import os
-
+from os import *
+from urllib.parse import *
+from pyrogram.types import *
+from pyrogram import *
 Pyrogrambot = Client(
     "Pyrogram Bot",
     bot_token = os.environ["BOT_TOKEN"],
