@@ -8,7 +8,7 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
 LIST = {}
 
-@app.on_message(filters.command(['menu']))
+@Client.on_message(filters.command(['menu']))
 async def start(client, message):
  await message.reply_text(text =f"""Hello {message.from_user.first_name }image to pdf bot 
 i can convert image to pdf
