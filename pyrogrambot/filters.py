@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogrambot.photos import KGF_PHOTOS, PHOTOS
-from pyrogrambot.buttons import KGF_D_BUTTON, buttuns
+from pyrogrambot.buttons import KGF_D_BUTTON, buttun
 import random
 
 @Client.on_message(filters.regex("kgf 2") & filters.private)
