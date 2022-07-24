@@ -34,7 +34,7 @@ KGF_D_BUTTON = [[
 HELP_B =       [[
              InlineKeyboardButton("Font", callback_data="id"),
              InlineKeyboardButton("ShareText", callback_data="id"),
-             InlineKeyboardButton("ShareText", callback_data="id")
+             InlineKeyboardButton("pdf", callback_data="id")
                ]]
 
 KGF_BUTTON = [[
