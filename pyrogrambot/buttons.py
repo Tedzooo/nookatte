@@ -6,15 +6,15 @@ button = [[
 
 MENU_BUTTON = [[
               InlineKeyboardButton("Sᴛɪᴄᴋᴇʀ", callback_data="sticker"),
-              InlineKeyboardButton("Vɪᴅᴇᴏ", callback_data="video")
+              InlineKeyboardButton("Vɪᴅᴇᴏ", callback_data="video"),
+              InlineKeyboardButton("Pʜᴏᴛᴏ", callback_data="photo")
               ],[
-              InlineKeyboardButton("Pʜᴏᴛᴏ", callback_data="photo"),
-              InlineKeyboardButton("Dᴇᴛᴀɪʟs", callback_data="id")
+              InlineKeyboardButton("pdf", callback_data="pdf")
               ],[
               InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="movies"),
-              InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
+              InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close"),
+              InlineKeyboardButton(" help", callback_data="help")
               ],[
-              InlineKeyboardButton(" help", callback_data="help"),
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="commands")
               ]]
 
@@ -34,7 +34,7 @@ KGF_D_BUTTON = [[
 HELP_B =       [[
              InlineKeyboardButton("Font", callback_data="id"),
              InlineKeyboardButton("ShareText", callback_data="id"),
-             InlineKeyboardButton("pdf", callback_data="id")
+             InlineKeyboardButton("pdf", callback_data="pdf")
                ]]
 
 KGF_BUTTON = [[
@@ -57,7 +57,7 @@ SMENU_BUTTO = [[
               InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="smovies"),
               InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
               ],[
-              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="sback"),
+              InlineKeyboardButton("«help", callback_data="help"),
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="scommands")
               ]]
 
@@ -71,7 +71,7 @@ VDENU_BUTTO = [[
               InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="smovies"),
               InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
               ],[
-              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="vback"),
+              InlineKeyboardButton("«help", callback_data="help"),
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="scommands")
               ]]
 
@@ -85,7 +85,7 @@ PMENU_BUTTN = [[
               InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="movies"),
               InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
               ],[
-              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="pback"),
+              InlineKeyboardButton("«help", callback_data="help"),
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="commands")
               ]]
 
