@@ -31,6 +31,10 @@ COMMM_BUTTON = [[
 KGF_D_BUTTON = [[
                InlineKeyboardButton("D O W N L O A D", callback_data="downlod")
                ]]
+HELP_B =     [[
+             InlineKeyboardButton("Font", callback_data="id"),
+             InlineKeyboardButton("ShareText", callback_data="id"),
+             InlineKeyboardButton("ShareText", callback_data="id"),
 
 KGF_BUTTON = [[
              InlineKeyboardButton("200MB", url="https://t.me/tedzoalert01/1659"),
