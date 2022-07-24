@@ -33,7 +33,7 @@ Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
                          "START","HELP","👀"
                      ]],
             resize_keyboard=True,
-            one_time_keyboard=True
+            
                 )
             )
 @Client.on_message(filters.group & filters.command("id")) 
