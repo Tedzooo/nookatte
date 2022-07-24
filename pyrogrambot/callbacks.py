@@ -183,7 +183,6 @@ Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
             await style(bot, update) # StylishText CallbackQuery
             cmd, style = update.data.split('+')
             await stylishtext(bot, update, style) # StylishText CallbackQuery
-   )
 
     elif msg.data == "vback":
         m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
