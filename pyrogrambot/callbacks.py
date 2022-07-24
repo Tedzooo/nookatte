@@ -1,7 +1,7 @@
 from pyrogram.types import CallbackQuery
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram import Client
-from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUTTON, S_BACK_BUTTO, SMENU_BUTTO, PMENU_BUTTN, button, VDENU_BUTTO
+from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUTTON, S_BACK_BUTTO, SMENU_BUTTO, PMENU_BUTTN, button, VDENU_BUTTO, HELP_B
 import asyncio
 import pytz, datetime
 from pyrogrambot.photos import PHOTOS
@@ -13,17 +13,17 @@ import random
 async def callback(bot, msg: CallbackQuery):
     if msg.data == "next":
         await msg.message.edit("○○○○○")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.1)
         await msg.message.edit("●○○○○")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.1)
         await msg.message.edit("●●○○○")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.1)
         await msg.message.edit("●●●○○")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.1)
         await msg.message.edit("●●●●○")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.1)
         await msg.message.edit("●●●●●")
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.1)
         await msg.message.edit(
             text="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
@@ -52,6 +52,14 @@ async def callback(bot, msg: CallbackQuery):
             photo=random.choice(PHOTOS),
             caption="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
+        )
+    elif msg.data == "help":
+        await msg.answer("Mode Chenged To Photo")
+        await msg.message.delete()
+        await msg.message.reply_photo(
+            photo=random.choice(PHOTOS),
+            caption="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
+            reply_markup=InlineKeyboardMarkup(HELP_B)
         )
 
     elif msg.data == "id":
