@@ -109,6 +109,24 @@ async def callback(bot, msg: CallbackQuery):
 ╰────────────────⍟""",
             reply_markup=InlineKeyboardMarkup(COMMM_BUTTON)
         )
+    elif msg.data == "pdf":
+        await msg.message.edit("○○○○○")
+        await msg.message.edit("●○○○○")
+        await msg.message.edit("●●○○○")
+        await msg.message.edit("●●●○○")
+        await msg.message.edit("●●●●○")
+        await msg.message.edit("●●●●●")
+        await msg.message.edit(
+            text="""╭────────────────⍟
+│
+│  PDF - PLZ SEND A IMAGE 
+│
+│  
+│                ©tedzosir
+╰────────────────⍟""",
+            reply_markup=InlineKeyboardMarkup(COMMM_BUTTON)
+        )
+
     elif msg.data == "downlod":
         await msg.message.edit(
             text="""<b>• Nᴀᴍᴇ : KGF
