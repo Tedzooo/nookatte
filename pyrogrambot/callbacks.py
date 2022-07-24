@@ -58,7 +58,7 @@ async def callback(bot, msg: CallbackQuery):
         await msg.message.delete()
         await msg.message.reply_photo(
             photo=random.choice(PHOTOS),
-            caption="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
+            caption="Hᴇʀᴇ Is Yᴏᴜ'help Mᴇɴᴜ",
             reply_markup=InlineKeyboardMarkup(HELP_B)
         )
 
