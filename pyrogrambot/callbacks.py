@@ -5,7 +5,7 @@ from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUT
 import asyncio
 import pytz, datetime
 from pyrogrambot.photos import PHOTOS
-from pyrogrambot.functions.font_func import style
+from pyrogrambot.font import stylishtext
 import random
 
 
