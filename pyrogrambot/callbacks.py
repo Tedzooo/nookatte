@@ -54,7 +54,7 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
     elif msg.data == "help":
-        await msg.answer("Mode Chenged To Photo")
+        await msg.answer("help menu")
         await msg.message.delete()
         await msg.message.reply_photo(
             photo=random.choice(PHOTOS),
