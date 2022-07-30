@@ -8,7 +8,7 @@ __help__ = """
 __mod_name__ = "Wᴇʙsʜᴏᴛ​​"
 
 
-@Client.on_message(filters.command("webss"))
+@Client.on_message(filters.command("webs"))
 async def take_ss(_, message: Message):
     try:
         if len(message.command) != 2:
