@@ -3,3 +3,4 @@ tgcrypto
 requests
 pytz
 Pillow
+aiohttp
