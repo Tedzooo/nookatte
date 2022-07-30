@@ -4,7 +4,7 @@ import requests
 from requests import get
 from pyrogram.types import Message
 from bs4 import *
-from pyrogram import filters
+from pyrogram import filters, Client
 from PIL import Image
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
