@@ -3,10 +3,10 @@ from requests import get
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-from FallenRobot import pbot as fallen, dispatcher, SUPPORT_CHAT
+from pyrogram import Client
 
 
-@fallen.on_message(filters.command("write"))
+@Client.on_message(filters.command("write"))
 async def handwrite(_, message: Message):
     if not message.reply_to_message:
         name = (
@@ -14,13 +14,14 @@ async def handwrite(_, message: Message):
             if len(message.command) < 3
             else message.text.split(None, 1)[1].replace(" ", "%20")
         )
-        m = await fallen.send_message(
+        m = await Client.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
+        MY_NAME
         photo = "https://apis.xditya.me/write?text=" + name
         caption = f"""
 sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{dispatcher.bot.first_name}](https://t.me/{dispatcher.bot.username})
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [tedzo](https://t.me/tedzo01)
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
         await fallen.send_photo(
@@ -31,7 +32,7 @@ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
                 [
                     [
                         InlineKeyboardButton(
-                            "• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/{SUPPORT_CHAT}"
+                            "• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/tzobotz"
                         )
                     ]
                 ]
@@ -41,16 +42,16 @@ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
     else:
         lol = message.reply_to_message.text
         name = lol.split(None, 0)[0].replace(" ", "%20")
-        m = await fallen.send_message(
+        m = await Client.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
         photo = "https://apis.xditya.me/write?text=" + name
         caption = f"""
 sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{dispatcher.bot.first_name}](https://t.me/{dispatcher.bot.username})
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{dispatcher.bot.first_name}](https://t.me/tedzo01)
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
-        await fallen.send_photo(
+        await Client.send_photo(
             message.chat.id,
             photo=photo,
             caption=caption,
@@ -58,7 +59,7 @@ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
                 [
                     [
                         InlineKeyboardButton(
-                            "• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/{SUPPORT_CHAT}"
+                            "• sᴜᴩᴩᴏʀᴛ •", url=f"https://t.me/tzobotz"
                         )
                     ]
                 ]
