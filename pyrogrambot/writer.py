@@ -2,7 +2,6 @@ import requests
 from requests import get
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
 from pyrogram import Client
 
 
@@ -14,7 +13,7 @@ async def handwrite(_, message: Message):
             if len(message.command) < 3
             else message.text.split(None, 1)[1].replace(" ", "%20")
         )
-        m = await Client.send_message(
+        m = await client.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
         MY_NAME
@@ -24,7 +23,7 @@ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
 ✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [tedzo](https://t.me/tedzo01)
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
-        await fallen.send_photo(
+        await client.send_photo(
             message.chat.id,
             photo=photo,
             caption=caption,
@@ -42,16 +41,16 @@ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
     else:
         lol = message.reply_to_message.text
         name = lol.split(None, 0)[0].replace(" ", "%20")
-        m = await Client.send_message(
+        m = await client.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
         photo = "https://apis.xditya.me/write?text=" + name
         caption = f"""
 sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{dispatcher.bot.first_name}](https://t.me/tedzo01)
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [Tedzo](https://t.me/tedzo01)
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
-        await Client.send_photo(
+        await client.send_photo(
             message.chat.id,
             photo=photo,
             caption=caption,
