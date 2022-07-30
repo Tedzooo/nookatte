@@ -2,10 +2,11 @@ import requests
 from requests import get
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram import Client
+
+from pyrogram import Client as fallen
 
 
-@Client.on_message(filters.command("write"))
+@fallen.on_message(filters.command("write"))
 async def handwrite(_, message: Message):
     if not message.reply_to_message:
         name = (
@@ -13,16 +14,16 @@ async def handwrite(_, message: Message):
             if len(message.command) < 3
             else message.text.split(None, 1)[1].replace(" ", "%20")
         )
-        m = await client.send_message(
+        m = await fallen.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
         photo = "https://apis.xditya.me/write?text=" + name
         caption = f"""
 sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [tedzo](https://t.me/tedzo01)
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [TEDZO](https://t.me/tedzo01)
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
-        await client.send_photo(
+        await fallen.send_photo(
             message.chat.id,
             photo=photo,
             caption=caption,
@@ -40,16 +41,16 @@ sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
     else:
         lol = message.reply_to_message.text
         name = lol.split(None, 0)[0].replace(" ", "%20")
-        m = await client.send_message(
+        m = await fallen.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
         photo = "https://apis.xditya.me/write?text=" + name
         caption = f"""
 sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [Tedzo](https://t.me/tedzo01)
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [TEDZO](https://t.me/tedzo01)
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 """
-        await client.send_photo(
+        await fallen.send_photo(
             message.chat.id,
             photo=photo,
             caption=caption,
