@@ -22,7 +22,7 @@ def get_text(message: Message) -> [None, str]:
         return None
 
 
-@pbot.on_message(filters.command(["wall", "wallpaper"]))
+@Client.on_message(filters.command(["wall", "wallpaper"]))
 async def wall(client, message):
     quew = get_text(message)
     if not quew:
