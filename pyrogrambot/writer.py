@@ -16,7 +16,6 @@ async def handwrite(_, message: Message):
         m = await client.send_message(
             message.chat.id, "**ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**\n\nʟᴇᴍᴍᴇ ᴡʀɪᴛᴇ ɪᴛ ᴏɴ ᴍʏ ᴄᴏᴩʏ..."
         )
-        MY_NAME
         photo = "https://apis.xditya.me/write?text=" + name
         caption = f"""
 sᴜᴄᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
