@@ -35,6 +35,7 @@ async def wall(client, message):
         text = get_text(message)
         LOGO_API = f"https://single-developers.up.railway.app/wallpaper?search={text}"
         randc = LOGO_API
+        MY_NAME = "@tedzo01"
         murl = (
             requests.get(
                 f"https://single-developers.up.railway.app/wallpaper?search={text}"
@@ -48,7 +49,7 @@ async def wall(client, message):
         caption = f"""
 💘 ᴡᴀʟʟᴩᴀᴩᴇʀ ɢᴇɴᴇʀᴀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ 
 
-✨ **ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ :** @tedzo01
+✨ **ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ :`{MY_NAME}`
 🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
 ❄ **ᴅᴏᴡɴʟᴏᴀᴅ :** `{murl}`
 """
