@@ -21,7 +21,7 @@ This bot created by @tedzosir""",reply_to_message_id = message.message_id ,  rep
 
 
 
-@Client.on_message(filters.private & filters.photo)
+@Client.on_message(filters.command("pdf"))
 async def pdf(client,message):
  
  if not isinstance(LIST.get(message.from_user.id), list):
