@@ -2,6 +2,7 @@ from pyrogram import filters
 from pyrogram import Client as NaysaBots
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import UserNotParticipant
+BOT_USERNAME = "@tedzo01"
 
 @NaysaBots.on_message(filters.private & filters.forwarded)
 async def info(bot, message):
