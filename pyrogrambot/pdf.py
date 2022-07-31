@@ -15,14 +15,14 @@ i can convert image to pdf
 This bot created by @tedzosir""",reply_to_message_id = message.message_id ,  reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("movies 🇮🇳" ,url="https://t.me/tedzomovie01") ],
-                 [InlineKeyboardButton("update 🧐", url="https://t.me/tzobotz") ]       ]        ) )
+                    InlineKeyboardButton("MOVIES" ,url="https://t.me/tedzomovie01") ],
+                 [InlineKeyboardButton("UPDATE", url="https://t.me/tzobotz") ]       ]        ) )
 
 
 
 
-@Client.on_message(filters.private & filters.command(["topdf", "pdf"]))
-async def pdf(client, message):
+@app.on_message(filters.private & filters.photo)
+async def pdf(client,message):
  
  if not isinstance(LIST.get(message.from_user.id), list):
    LIST[message.from_user.id] = []
