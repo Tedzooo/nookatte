@@ -21,7 +21,10 @@ This bot created by @tedzosir""",reply_to_message_id = message.message_id ,  rep
 
 
 
-@Client.on_message(filters.command("pdf"))
+@Client.on_message(
+    filters.command("telegraph") &
+    f_onw_fliter
+)
 async def pdf(client,message):
  
  if not isinstance(LIST.get(message.from_user.id), list):
