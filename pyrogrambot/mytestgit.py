@@ -1,4 +1,4 @@
-# © @AnonymousBoy1025
+# © @tedzo01
 import aiohttp
 from pyrogram import filters
 from pyrogram import Client
