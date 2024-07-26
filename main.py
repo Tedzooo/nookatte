@@ -15,7 +15,7 @@ pyrogrambot= Client(
     api_id=API_ID,
     api_hash=API_HASH,
     workers=100,
-    plugins=dict(root="plugins")
+    plugins=dict(root="Pyrogrambot")
 )
 
 Pyrogrambot.run()
