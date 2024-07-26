@@ -1,4 +1,4 @@
-""" Hack Animation """
+""" Hack Animation 
 
 # Copyright (C)
 
@@ -54,4 +54,4 @@ async def hack_func(message):
     for i in range(max_ani):
         await asyncio.sleep(2)
         await message.edit(animation_chars[i % max_ani], parse_mode=ParseMode.HTML)
-    await message.edit(hecked, parse_mode=ParseMode.HTML)
+    await message.edit(hecked, parse_mode=ParseMode.HTML)"""
