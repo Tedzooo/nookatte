@@ -5,3 +5,4 @@ pytz
 Pillow
 aiohttp
 beautifulsoup4
+python-dotenv
