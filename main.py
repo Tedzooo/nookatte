@@ -10,7 +10,7 @@ BOT_TOKEN = '7384862816:AAHvxhtB-4rroiSlZmbgf0MUfKP25hNpmeA'
 
 load_dotenv()
 
-pyrogrambot= Client(
+app= Client(
     "Pyrogram Bot",
     bot_token=BOT_TOKEN,
     api_id=API_ID,
@@ -19,4 +19,4 @@ pyrogrambot= Client(
     plugins=dict(root="pyrogrambot")
 )
 
-Pyrogrambot.run()
+app.run()
