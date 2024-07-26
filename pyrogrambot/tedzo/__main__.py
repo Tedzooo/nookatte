@@ -1,4 +1,3 @@
-""" Hack Animation """"
 
 # Copyright (C)
 
