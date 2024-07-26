@@ -5,9 +5,10 @@ from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 import random
 import asyncio
+from pyrogram.errors import UserNotParticipant
 
 # Define a function to handle the /start command
-@app.on_message(filters.command("tss"))
+@Client.on_message(filters.command("tss"))
 async def hak(client: Client, message: Message):
     await message.edit_text("Looking for WhatsApp databases in targeted person...")
     await asyncio.sleep(2)
