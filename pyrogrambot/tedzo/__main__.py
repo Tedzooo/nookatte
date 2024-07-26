@@ -1,14 +1,7 @@
 """ Hack Animation """
 
-# Copyright (C) 2020-2022 by UsergeTeam@Github, < https://github.com/UsergeTeam >.
-#
-# This file is part of < https://github.com/UsergeTeam/Userge > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/UsergeTeam/Userge/blob/master/LICENSE >
-#
-# All rights reserved.
+# Copyright (C)
 
-# by Alone
 
 import asyncio
 
@@ -16,7 +9,7 @@ from pyrogram import Client
 from pyrogram.enums import ParseMode
 
 
-@app.on_cmd("hack$", about={"header": "kensar hacking animation"})
+@Client.on_cmd("hack$", about={"header": "kensar hacking animation"})
 async def hack_func(message):
     user = await message.client.get_user_dict(message.from_user.id)
     heckerman = user["mention"]
